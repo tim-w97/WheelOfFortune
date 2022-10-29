@@ -9,13 +9,24 @@ var padding = { top: 20, right: 40, bottom: 0, left: 0 },
     color = d3.scale.category20();
 
 var data = [
-    { "label": "Superkräfte", "value": 1, "question": "Wenn Du eine Superkraft hättest, welche wäre das?" },
+    { "label": "Ich bin Batman", "value": 1, "question": "Wenn Du eine Superkraft hättest, welche wäre das?" },
     { "label": "Urlaub", "value": 1, "question": "Wo machst du am liebsten Urlaub?" },
     { "label": "Promi", "value": 1, "question": "Welchen Promi würdest Du gerne mal treffen?" },
     { "label": "Job", "value": 1, "question": "Was war Dein erster Job?" },
-    { "label": "WhatsApp", "value": 1, "question": "Was ist dir lieber? Telefonieren oder WhatsApp?" }
+    { "label": "WhatsApp", "value": 1, "question": "Was ist dir lieber? Telefonieren oder WhatsApp?" },
+    { "label": "Kaffee oder Tee?", "value": 1, "question": "Was ist dir lieber? Kaffee oder Tee?" },
+    { "label": "Geld Geld und Geld", "value": 1, "question": "Wenn Du kein Geld verdienen müsstest, was würdest Du dann machen?" },
+    { "label": "Mittelalter", "value": 1, "question": "Wenn Du im Mittelalter gelebt hättest, was wäre Dein Job gewesen?" },
+    { "label": "Zweitsprache", "value": 1, "question": "Wenn du morgen eine neue Sprache sprechen könntest, welche wäre das?" },
+    { "label": "Aufstehen!", "value": 1, "question": "Wie oft drückst du morgens auf die Snooze-Taste?" },
+    { "label": "Zurück in die Steinzeit", "value": 1, "question": "Was würdest du drei Tage ohne Strom machen?" },
+    { "label": "Restaurant", "value": 1, "question": "Wo gehst du in Hof am liebsten essen? Hast du einen Geheimtipp?" },
+    { "label": "Schoki oder Chips?", "value": 1, "question": "Isst du lieber Schokolade oder Chips?" },
+    { "label": "Weltreise", "value": 1, "question": "Was ist das weit entfernteste Land, in das du bisher gereist bist?" },
+    { "label": "Leseratte", "value": 1, "question": "Bücher oder Filme? Was magst du mehr?" },
+    { "label": "Gute Vorsätze", "value": 1, "question": "Was planst du für das nächste Jahr?" },
+    { "label": "Erdbeerkäse und Co.", "value": 1, "question": "Gibt es ein Essen, das dir überhaupt nicht schmeckt?" },
 ];
-
 
 var svg = d3.select('#chart')
     .append("svg")
@@ -55,7 +66,7 @@ arcs.append("text").attr("transform", function (d) {
     return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")translate(" + (d.outerRadius - 10) + ")";
 })
     .attr("text-anchor", "end")
-    .style({ "font-weight": "bold", "font-size": "20px" })
+    .style({ "font-weight": "bold", "font-size": "15px" })
     .text(function (d, i) {
         return data[i].label;
     });
